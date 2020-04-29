@@ -1,3 +1,4 @@
+const path = require('path');
 const merge = require('webpack-merge');
 const spawn = require('child_process').spawn;
 
@@ -17,6 +18,8 @@ module.exports = merge.smart(baseConfig, {
         inline: true,
         hot: true,
         headers: { 'Access-Control-Allow-Origin': '*' },
+        contentBase: path.join(__dirname, 'assets'),
+        contentBasePublicPath: '/',
         historyApiFallback: {
             verbose: true,
             disableDotRule: false
@@ -24,7 +27,7 @@ module.exports = merge.smart(baseConfig, {
         before() {
             if (process.env.START_HOT) {
                 console.log('Starting main process');
-                spawn('npm', ['run', 'start-main-dev'], {
+                spawn('yarn', ['start-main-dev'], {
                     shell: true,
                     env: process.env,
                     stdio: 'inherit'

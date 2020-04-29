@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const copyPlugins = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -17,5 +18,8 @@ module.exports = {
     },
     devtool: 'source-map',
     plugins: [
+        new copyPlugins([
+            { from: 'src/main/preloads/*.js', to: 'preloads/', flatten: true },
+        ])
     ]
 };

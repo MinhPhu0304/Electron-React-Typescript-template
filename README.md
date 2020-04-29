@@ -1,4 +1,4 @@
-# electron-react-typescript
+# Electron React Typescript boilerplate
 
 ### A Boilerplate for an Easy Start with TypeScript, React, and Electron.
 
@@ -15,22 +15,22 @@
 Clone the repository with Git:
 
 ```bash
-git clone --depth=1 git@github.com:Robinfr/electron-react-typescript.git <your-project-name>
+git clone --depth=1 https://github.com/MinhPhu0304/Electron-React-Typescript-template.git <your-project-name>
 ```
 
 And then install the dependencies:
 
 ```bash
 cd <your-project-name>
-npm install
+yarn
 ```
 
 ## Usage
 Both processes have to be started **simultaneously** in different console tabs:
 
 ```bash
-npm run start-renderer-dev
-npm run start-main-dev
+yarn start-renderer-dev
+yarn start-main-dev
 ```
 
 This will start the application with hot-reload so you can instantly start developing your application.
@@ -38,7 +38,7 @@ This will start the application with hot-reload so you can instantly start devel
 You can also run do the following to start both in a single process:
 
 ```bash
-npm run start-dev
+yarn start-dev
 ```
 
 ## Packaging
@@ -73,4 +73,4 @@ Also remove all mentions of Prettier from the `extends` section in `.eslintrc.js
 This project was set up from scratch but is heavily influenced by the [Electron React Boilerplate project](https://github.com/chentsulin/electron-react-boilerplate) and [React Redux TypeScript guide](https://github.com/piotrwitek/react-redux-typescript-guide).
 
 ## License
-MIT © [R. Franken](https://github.com/Robinfr)
+MIT © [Minh Phu Lai](https://github.com/minhphu0304)
